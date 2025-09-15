@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <center>
+            <nav class="mt-5">
+              @*<a href="/Home/Index" class="btn btn-primary m-2">Home</a>*@  
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary m-2">Home</a>
+                <a href="/Home/Privacy" class="btn btn-warning m-2">Privacy</a>
+                <a href="/Home/AboutUs" class="btn btn-success m-2">AboutUs</a>
+                <a href="/Home/ContactUs" class="btn btn-secondary m-2">ContactUs</a>
+              @*<a href="/Account/Register" class="btn btn-danger ">Register</a>*@ 
+                <a asp-controller="Account" asp-action="Register" class="btn btn-danger ">Register</a>
+                <a href="/Account/LogIn" class="btn btn-info ">LogIn</a>
+            </nav>
+        </center>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <center>
+            <div>
+                <p>CopyRights &copy; Route @DateTime.Now.Year</p>
+            </div>
+        </center>
+    </footer>
+</body>
+</html>
